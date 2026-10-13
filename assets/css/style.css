@@ -1,0 +1,315 @@
+/* Custom Styling Modern RestoOrder */
+:root {
+    --primary: #0f172a;
+    --primary-accent: #2563eb;
+    --primary-light: #f1f5f9;
+    --accent: #f59e0b;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --dark: #0f172a;
+    --surface: #ffffff;
+    --light-bg: #f8fafc;
+    --card-border: #e2e8f0;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--light-bg);
+    color: #334155;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.01em;
+}
+
+/* --- NAVBAR STYLING BERSIH & ELEGAN --- */
+.navbar-custom {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    padding: 0.65rem 0;
+    transition: all 0.25s ease;
+}
+
+.brand-emblem {
+    width: 38px;
+    height: 38px;
+    background: #0f172a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f59e0b;
+    font-size: 1.15rem;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.brand-emblem:hover {
+    transform: scale(1.05);
+}
+
+.brand-title {
+    font-weight: 800;
+    font-size: 1.28rem;
+    letter-spacing: -0.4px;
+    color: #0f172a;
+    line-height: 1.1;
+}
+
+/* Nav Items */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 0.90rem;
+    color: #64748b !important;
+    padding: 0.50rem 0.90rem !important;
+    border-radius: 8px;
+    margin: 0 2px;
+    transition: all 0.15s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 0.90rem;
+    color: #94a3b8;
+    transition: all 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0f172a !important;
+    background-color: #f8fafc;
+}
+
+.navbar-nav .nav-link:hover i {
+    color: #0f172a;
+}
+
+.navbar-nav .nav-link.active {
+    color: #0f172a !important;
+    background: #f1f5f9;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.navbar-nav .nav-link.active i {
+    color: #0f172a;
+}
+
+/* Status Indicator Dot */
+.status-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #475569;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.pulse-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #10b981;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-dot::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* Right Navbar Buttons */
+.btn-nav-secondary {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    transition: all 0.2s ease;
+}
+
+.btn-nav-secondary:hover {
+    background: #f8fafc;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+.btn-nav-action {
+    background: #0f172a;
+    border: 1px solid #0f172a;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.btn-nav-action:hover {
+    background: #1e293b;
+    border-color: #1e293b;
+    color: #ffffff;
+}
+
+/* Card Styling */
+.card-stat {
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: var(--card-shadow);
+    transition: all 0.25s ease;
+}
+
+.card-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* Table Cards (Meja) */
+.table-card {
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    border: 1px solid var(--card-border);
+}
+
+.table-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.06);
+}
+
+.table-card.table-available {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.table-card.table-reserved {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+
+.table-card.table-occupied {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+
+/* Interactive Menu Hover Card */
+.hover-card:hover {
+    border-color: #0f172a !important;
+    background-color: #fafafa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+.btn-primary {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: #1e293b;
+    border-color: #1e293b;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+.btn-outline-primary:hover {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+}
+
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    padding: 0.45em 0.75em;
+    border-radius: 8px;
+}
+
+/* PRINT CSS - HANYA CETAK NOTA BUKTI */
+@media print {
+    /* Sembunyikan semua elemen layout web umum */
+    .no-print,
+    header,
+    nav,
+    footer,
+    .navbar,
+    .navbar-custom,
+    .btn,
+    .alert,
+    .dropdown,
+    #categoryFilterBar,
+    .modal {
+        display: none !important;
+    }
+
+    body, html {
+        background: #ffffff !important;
+        color: #000000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    main, .container, .container-fluid {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    #printableReceipt {
+        display: block !important;
+        width: 100% !important;
+        max-width: 420px !important;
+        margin: 15px auto !important;
+        padding: 20px !important;
+        border: 1px dashed #64748b !important;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        page-break-inside: avoid;
+    }
+
+    #printableReceipt * {
+        color: #000000 !important;
+        background: transparent !important;
+    }
+
+    #printableReceipt .badge {
+        border: 1px solid #000000 !important;
+        color: #000000 !important;
+    }
+}

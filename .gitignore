@@ -1,0 +1,39 @@
+# ==========================================
+# RestoOrder .gitignore
+# ==========================================
+
+# Temporary Office & Editor Locks
+~$*
+*.tmp
+*.bak
+*backup*
+
+# Binary Documents (Laporan & Slide Presentasi untuk asesmen)
+*.docx
+*.pptx
+*.pdf
+docs/
+
+# Build & Automation Helpers
+build_full_report.py
+temp_docx_extract/
+test_shot.png
+doc_assets/word/
+
+# Application Runtime Logs
+logs/*.log
+!logs/.gitkeep
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE / Code Editor Settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+nbproject/
