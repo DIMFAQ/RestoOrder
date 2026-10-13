@@ -41,7 +41,7 @@ require_once __DIR__ . '/layouts/header.php';
                 </div>
                 <div class="col-6">
                     <span class="text-muted d-block">Pelanggan:</span>
-                    <strong><?= htmlspecialchars($order['customer_name']) ?></strong> (<?= htmlspecialchars($order['customer_phone']) ?>)
+                    <strong><?= htmlspecialchars($order['customer_name']) ?></strong><?= (!empty($order['customer_phone']) && $order['customer_phone'] !== '-') ? ' (' . htmlspecialchars($order['customer_phone']) . ')' : '' ?>
                 </div>
                 <div class="col-6 text-end">
                     <span class="text-muted d-block">Meja:</span>

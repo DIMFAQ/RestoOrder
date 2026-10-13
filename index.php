@@ -159,8 +159,12 @@ try {
 
                 $validator = new \App\Core\Validator();
                 $validator->required('Nama Pelanggan', $custName)
-                          ->required('No. Telepon', $custPhone)
                           ->required('Meja', $tableId);
+
+                // No. Telepon opsional di pesanan/kasir; jika diisi, validasi formatnya
+                if (!empty($custPhone)) {
+                    $validator->phone('No. Telepon', $custPhone);
+                }
 
                 if (empty($menuItemIds) || count($menuItemIds) === 0) {
                     $validator->required('Menu Pesanan', '', 'Minimal pilih satu menu makanan/minuman.');

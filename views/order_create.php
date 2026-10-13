@@ -110,8 +110,8 @@ require_once __DIR__ . '/layouts/header.php';
                                 <input type="text" name="customer_name" class="form-control form-control-sm" placeholder="Nama tamu" required>
                             </div>
                             <div class="col-6">
-                                <label class="form-label small fw-semibold text-secondary">No. HP / WhatsApp <span class="text-danger">*</span></label>
-                                <input type="text" name="customer_phone" class="form-control form-control-sm" placeholder="08xxxxxxxxxx" required>
+                                <label class="form-label small fw-semibold text-secondary">No. HP / WhatsApp <span class="text-muted fw-normal">(Opsional)</span></label>
+                                <input type="text" name="customer_phone" class="form-control form-control-sm" placeholder="08xxxxxxxxxx (opsional)">
                             </div>
                             <div class="col-12">
                                 <label class="form-label small fw-semibold text-secondary">Kaitkan Reservasi (Opsional)</label>

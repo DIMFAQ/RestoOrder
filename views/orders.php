@@ -59,7 +59,7 @@ require_once __DIR__ . '/layouts/header.php';
                             </td>
                             <td>
                                 <div class="fw-semibold text-dark"><?= htmlspecialchars($o['customer_name']) ?></div>
-                                <div class="small text-muted"><?= htmlspecialchars($o['customer_phone']) ?></div>
+                                <div class="small text-muted"><?= (!empty($o['customer_phone']) && $o['customer_phone'] !== '-') ? htmlspecialchars($o['customer_phone']) : '<span class="text-secondary">-</span>' ?></div>
                             </td>
                             <td><span class="badge bg-light text-dark border"><?= htmlspecialchars($o['table_number']) ?></span></td>
                             <td><?= FormatHelper::rupiah($o['total_amount']) ?></td>
